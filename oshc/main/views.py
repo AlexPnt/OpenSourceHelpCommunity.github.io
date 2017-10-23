@@ -38,20 +38,6 @@ def add_contest(request):
         form = ContestForm()
     return render(request, 'contest_edit.html', {'form': form})
 
-
-
-    # contest = Contest()
-    # contest.name = request.POST.get("name", "null")
-    # contest.link = request.POST.get("link", "null")
-    # start_date = request.POST.get("start_date", "null")
-    # end_date = request.POST.get("end_date", "null")
-    # contest.description = request.POST.get("desc", "null")
-    # contest.end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
-    # contest.start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
-    # contest.save()
-    # return HttpResponseRedirect("/submit_contest/")
-
-
 def submit_contest(request):
     return render(request, 'contest_submission.html')
 
