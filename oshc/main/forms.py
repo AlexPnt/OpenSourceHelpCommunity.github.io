@@ -10,6 +10,8 @@ class ContestForm(forms.ModelForm):
         self.helper.form_tag = False
         self.helper.label_class = 'col-lg-2'
         self.helper.field_class = 'col-lg-8'
+        self.fields['start_date'].widget.attrs['class'] = 'datepicker'
+        self.fields['end_date'].widget.attrs['class'] = 'datepicker'
 
     class Meta:
         model = Contest
